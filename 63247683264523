@@ -10371,7 +10371,7 @@ runFunction(function()
 	ReachCorner.CornerRadius = UDim.new(0, 4)
 	ReachCorner.Parent = ReachLabel
 end)
-warningNotification("Moon 4.0","Loaded! (A reminder to not use tenacity, its skidded!)")
+warningNotification("Moon 4.0","Loaded! (A reminder to not use tenacity, its skidded!)",10)
 task.spawn(function()
 	function createannouncement(announcetab)
 		local vapenotifframe = Instance.new("TextButton")
