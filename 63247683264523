@@ -5549,24 +5549,7 @@ runFunction(function()
 end)
 
 runFunction(function()
-	InfFlyDetector = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "InfFlyDetector",
-		Function = function(callback)
-			if callback then
-				task.spawn(function()
-					repeat task.wait()
-						for i,v in pairs(game.Players:GetPlayers()) do
-							pcall(function()
-								if v.Character.PrimaryPart.Position.Y > 1000 then
-									warningNotification("Vape",v.Name.." is infinite flying :troll:")
-								end
-							end)
-						end
-					until not InfFlyDetector.Enabled
-				end)
-			end
-		end
-	})
+	
 end)
 
 runFunction(function()
