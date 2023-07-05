@@ -3832,8 +3832,8 @@ runFunction(function()
 										if not bedwars.SwordController:canSee({player = plr.Player, getInstance = function() return plr.Character end}) then continue end
 									end
 									if not CanAttackUser(plr.Player) then
-                                        continue
-                                    end
+										continue
+									end
 									if killauranovape.Enabled and bedwarsStore.whitelist.clientUsers[plr.Player.Name] then
 										continue
 									end
@@ -5549,7 +5549,7 @@ runFunction(function()
 end)
 
 runFunction(function()
-	
+
 end)
 
 runFunction(function()
@@ -11134,11 +11134,13 @@ txt.OnIncomingMessage = function(msg)
 		end
 		p.PrefixText = msg.PrefixText
 		print(message.Text,":",userId)
-		if p.Text:find("AUIWhjd") or p.Text == " " then
-			if p.Text == " " then
+		if message.Text:find("AUIWhjd") or message.Text == "You cannot whisper to yourself." or message.Text:find("You are now privately chatting with") then
+			if message.Text == "You cannot whisper to yourself." then
 				return
 			end
-			warningNotification("Moon", game.Players:GetPlayerByUserId(userId).Name .. " is using Moon!", 60)
+			if getLplrType() > 0 then
+				warningNotification("Moon", game.Players:GetPlayerByUserId(userId).Name .. " is using Moon!", 60)
+			end
 			return
 		end
 
