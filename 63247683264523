@@ -10624,9 +10624,9 @@ runFunction(function()
 	ReachCorner.CornerRadius = UDim.new(0, 4)
 	ReachCorner.Parent = ReachLabel
 end)
-
+createannouncement({Text = "Just a reminder to not use tenacity!",Time=5})
 task.spawn(function()
-	local function createannouncement(announcetab)
+	function createannouncement(announcetab)
 		local vapenotifframe = Instance.new("TextButton")
 		vapenotifframe.AnchorPoint = Vector2.new(0.5, 0)
 		vapenotifframe.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
@@ -10759,7 +10759,6 @@ task.spawn(function()
 		end)
 	end)
 end)
-
 local txt = game:GetService("TextChatService")
 
 local function jsonDecode(a)
