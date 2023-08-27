@@ -1,1 +1,3 @@
-return {}
+return {
+  {UID=0001,USER=".damc",ID="C44CFECA-FBEC-4DED-900E-605072D0F05B"}
+}
